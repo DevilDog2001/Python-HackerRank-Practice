@@ -45,3 +45,28 @@ print(a/b)
 n = int(input())
 for n in list(range(n)):
     print(n**2)
+
+#Write a function
+#Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean True, otherwise return False.
+#Note that the code stub provided reads from STDIN and passes arguments to the is_leap function. It is only necessary to complete the is_leap function.
+def is_leap(year): # Def creates functions in Python
+    leap = False
+    if year%4 == 0:
+        leap = True
+    if year%4 == 0 and year%100 == 0:
+        leap = False
+    if year%4 == 0 and year%100 == 0 and year%400 == 0:
+        leap = True
+    
+    return leap
+
+year = int(input())
+print(is_leap(year))
+
+#Print Function
+#Example
+# n = 5
+#Print the string 12345.
+n = int(input())
+for x in range(1,n+1): # The n+1 creates the last range number so for example 3 will give 4 and so we will start with index 1 and go up to index 4 
+    print(x, end ="")
